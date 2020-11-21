@@ -1,6 +1,7 @@
 
 body {
     font-family: 'source sans pro', Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
@@ -10,10 +11,34 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
 .header {
     
     background-color: #244051;  
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
 }
 .header a {
     color: white;
     text-decoration: none;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+.header ol,li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    height: inherit;
+}
+
+.header figure {
+    margin: 0;
+    height: inherit;
+}
+
+.header ol {
+    display: flex;
+    height: inherit;
+    
 }
 
 
@@ -21,27 +46,65 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
 
 .hero {
     height: 300px;
-    background-image: url('../images/hero\ canada.jpg');
+    /* background-image: url('../images/hero\ canada.jpg'); */
     background-color: #244051;
     background-size: 500px 300px;
     background-repeat: no-repeat;
     background-position-x:right ;
+    display: flex;
+    align-items: center;
 }
 
 .hero-title {
     line-height: 45px;
     font-size: 2.5em;
     color: white;
+    
 }
 
 .hero h1 strong {
     color: #e7443e;
 }
 
-/* Project */
+/* Portfolio - Project */
+
+.portfolio {
+    background: red;
+}
+
+.project {
+    border: 1px solid gray;
+    background: #fafafa;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin: 10px;
+    padding: 20px;
+    
+}
 .project-left-div {
     width: 500px;
+    
 }
 .project-imageContainer {
     width: 500px;
+    
+}
+
+/* Project2 */
+
+
+/* footer */
+
+.footer {
+    background: #244051;
+    color: white;
+    
+    display: flex;
+    vertical-align: middle;
+    justify-content: space-between;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
 }
