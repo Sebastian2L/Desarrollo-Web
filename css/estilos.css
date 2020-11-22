@@ -22,6 +22,12 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
     display: flex;
     align-items: center;
     padding: 0px 10px;
+    pointer-events:visible ;
+
+}
+
+.header a :hover{
+    color: red;
 }
 .header ol,li {
     margin: 0px;
@@ -69,7 +75,13 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
 /* Portfolio - Project */
 
 .portfolio {
-    background: red;
+    background: #244051;
+    padding: 20px;
+}
+
+.portfolio h2 {
+    color:white;
+    /* font-family: 'source sans pro', Arial, Helvetica, sans-serif */
 }
 
 .project {
@@ -77,8 +89,10 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
     background: #fafafa;
     border-radius: 5px;
     margin-bottom: 15px;
-    margin: 10px;
+    display: flex;
     padding: 20px;
+    align-items: center;
+    justify-content: space-between;
     
 }
 .project-left-div {
@@ -90,9 +104,138 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
     
 }
 
+.project-title {
+    font-size: 40px;
+    padding: 0px;
+}
+.project-subtitle {
+    font-size: 20px;
+}
+.project-date {
+    font-size: 15px;
+}
+.project-link {
+    font-size: 15px;
+}
+.project-blog {
+    font-size: 16px;
+    font-weight: bold;
+}
+
 /* Project2 */
 
+/* Event */
 
+.events {
+    display: flex;
+}
+
+.event-project {
+    
+    border-radius: 5px;
+    margin: 10px;
+    width: 480px;
+    background: darkgray;
+    overflow: hidden;
+    flex-shrink: 0;
+    
+}
+
+.event-project img {
+    width: 480px; 
+}
+
+.event-detail {
+    background: white;
+    margin: 20px 50px;
+    margin-top: -50px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.event-detail a {
+    border: 1px solid crimson;
+    color: crimson;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.event-title {
+    margin-left: 10px;
+}
+
+/* contacts */
+
+.contacts {
+    background: grey;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.contact-form {
+    margin: 10px;
+}
+.contact-input {
+    background-image: url(../images/message.png);
+    background-size: 21px 19px;
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: 3px;
+    border-radius: 5px;
+    padding: 5px 5px 5px 40px;
+    border: 1px solid lightgrey;
+    
+}
+
+.contact-button {
+    display: block;
+    border-radius: 5px;
+    border: 1px white solid;
+    color: white;
+    background-color: grey;
+    padding: 5px 60px;
+    margin-top: 10px;
+
+}
+
+
+
+.social-media a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+.social-link-twitter {
+    background-image: url(../images/Twitter-Logo.png);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.social-link-facebook {
+    background-image: url(../images/facebook.png);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.social-link-instagram {
+     background-image: url(../images/instagram.svg);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.social-link-github {
+      background-image: url(../images/github.png);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /* footer */
 
 .footer {
