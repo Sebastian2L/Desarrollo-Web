@@ -14,6 +14,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
     display: flex;
     justify-content: space-between;
     height: 90px;
+    
 }
 .header a {
     color: white;
@@ -37,7 +38,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
 }
 
 .header figure {
-    margin: 0;
+    margin-top: 20px;
     height: inherit;
 }
 
@@ -52,18 +53,19 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
 
 .hero {
     height: 300px;
-    /* background-image: url('../images/hero\ canada.jpg'); */
+    background-image: url('../images/canada\ lkae.jpg');
     background-color: #244051;
-    background-size: 500px 300px;
+    /* background-size: 500px 300px; */
     background-repeat: no-repeat;
     background-position-x:right ;
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 
+
 .hero-title {
-    line-height: 45px;
-    font-size: 2.5em;
+    line-height: 80px;
+    font-size: 4.5em;
     color: white;
     
 }
@@ -71,6 +73,15 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
 .hero h1 strong {
     color: #e7443e;
 }
+
+.hero p {
+    font-size: 3.5em;
+    color: white;
+    font-weight: 800;
+    margin-top: -80px;
+}
+
+
 
 /* Portfolio - Project */
 
@@ -128,14 +139,15 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
 
 .events {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .event-project {
-    
+    border: 1px solid lightgrey;
     border-radius: 5px;
     margin: 10px;
-    width: 480px;
-    background: darkgray;
+    width: 478px;
+    background: whitesmoke;
     overflow: hidden;
     flex-shrink: 0;
     
@@ -169,12 +181,13 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
 /* contacts */
 
 .contacts {
-    background: grey;
+    background:white;
     height: 150px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: white;
+    color: crimson;
+
 }
 
 .contact-form {
@@ -197,7 +210,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
     border-radius: 5px;
     border: 1px white solid;
     color: white;
-    background-color: grey;
+    background-color:crimson;
     padding: 5px 60px;
     margin-top: 10px;
 
@@ -241,13 +254,36 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
 .footer {
     background: #244051;
     color: white;
-    
     display: flex;
     vertical-align: middle;
     justify-content: space-between;
+
 }
 
 .footer a {
     text-decoration: none;
     color: white;
+}
+
+.footer-message1 {
+    margin: 10px;
+}
+.footer-message2 {
+    margin: 10px;
+}
+
+/* Container */
+
+.container{
+    border: 1px solid red;
+    width: 1000px;
+    margin: 0 auto;
+    border: inherit;
+    border-radius: inherit;
+    display: inherit;
+    justify-content: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+
+    align-items: inherit;
 }
