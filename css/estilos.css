@@ -51,25 +51,33 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
 
 
 /* Principal - Hero */
-
 .hero {
-    height: 300px;
-    background-image: url('../images/canada\ lkae.jpg');
-    background-color: #244051;
-    /* background-size: 500px 300px; */
-    background-repeat: no-repeat;
-    background-position-x:right ;
-    /* display: flex; */
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
 }
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+
 
 
 .hero-title {
     line-height: 80px;
     font-size: 4.5em;
     color: white;
+    z-index: 2;
     
 }
 
@@ -320,6 +328,27 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
     .container {
         padding: 0 1em;
     }
+    .hero {
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 2em;
+    }
+
+    .hero-image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .hero-title{
+        font-size: 4em;
+        z-index: 2;
+    }
 }
 @media screen and (max-width: 767px) {
 
@@ -402,6 +431,11 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
    .event-detail a {
        padding: 1px 5px;
    }
+
+   .hero-title {
+    font-size: 3.5em;
+    z-index: 2;
+}
 }
 @media screen and (max-width: 480px) {
     .project-title {
@@ -443,6 +477,19 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
         display: block;
         text-align: center;
         border: 1px solid transparent;
+    }
+    .hero{
+        padding: 0;
+        justify-content: center;
+    }
+
+    
+
+    .hero-title {
+        line-height: 50px;
+        font-size: 2em;
+        z-index: 2;
+        text-align: center;
     }
 }
 @media screen and (max-width: 320px) {
