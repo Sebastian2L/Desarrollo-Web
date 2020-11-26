@@ -1,4 +1,64 @@
 
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?tc7q2y');
+    src:  url('../fonts/icomoon.eot?tc7q2y#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?tc7q2y') format('truetype'),
+      url('../fonts/icomoon.woff?tc7q2y') format('woff'),
+      url('../fonts/icomoon.svg?tc7q2y#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  } 
+  
+  [class^="icon-"], [class*=" icon-"] { 
+     /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+  
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
+
+
+ @font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?ns0zc');
+    src:  url('fonts/icomoon.eot?ns0zc#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?ns0zc') format('truetype'),
+      url('fonts/icomoon.woff?ns0zc') format('woff'),
+      url('fonts/icomoon.svg?ns0zc#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  .icon-facebook:before {
+    content: "\ea90";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  .icon-github:before {
+    content: "\eab0";
+  }
+  
+
 body {
     font-family: 'source sans pro', Arial, Helvetica, sans-serif;
     margin: 0;
@@ -17,6 +77,12 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
     flex-wrap: wrap;
     
 }
+
+.menu {
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
 .header a {
     color: white;
     text-decoration: none;
@@ -28,9 +94,6 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
 
 }
 
-.header a :hover{
-    color: red;
-}
 .header ol,li {
     margin: 0px;
     padding: 0px;
@@ -322,6 +385,22 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
 
 }
 
+/* BURGER MENU */
+
+.burger-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.8);
+    display: none;
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    z-index: 4;
+    color: white;
+}
 /* DESKTOP FIRTS - MediaQuery para empezar por el mas grande */
 
 @media screen and (max-width: 1024px) {
@@ -349,15 +428,37 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
         font-size: 4em;
         z-index: 2;
     }
+
 }
 @media screen and (max-width: 767px) {
+    
+    .menu {
+        position: fixed;
+        z-index: 3;
+        background-color: rgba(220,20, 60,.8);
+        bottom: 0;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        height: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+
+    }
+
+    .menu.is-active {
+        left: 0;
+    }
 
     .header {
         display: block;
-        height: auto;
+        height: 90px;
     }
     .header figure {
         text-align: center;
+        margin-top: 0px;
     }
 
     .header figure img {
@@ -365,6 +466,11 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
         height: 40px;
         margin-top: 0;
         padding: 5px;
+    }
+
+    .header a {
+        font-size: 2em;
+        margin: 30px;
     }
 
     .header ol {
@@ -435,6 +541,9 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
    .hero-title {
     font-size: 3.5em;
     z-index: 2;
+}
+.burger-button {
+    display: block;
 }
 }
 @media screen and (max-width: 480px) {
@@ -509,5 +618,8 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Fjalla One' , sans-serif;}
     .project-blog {
         font-size: .8em;
         
+    }
+    .header a {
+        font-size: 1.5em;
     }
 }
